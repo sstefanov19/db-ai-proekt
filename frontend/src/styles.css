@@ -1,0 +1,184 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f5f6f8;
+  color: #1f2430;
+}
+
+.loading {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+}
+
+/* Layout */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: #1f2430;
+  color: #fff;
+}
+
+.topbar h1 { font-size: 1.05rem; margin: 0; font-weight: 600; }
+.topbar .user { font-size: 0.9rem; opacity: 0.85; margin-right: 0.75rem; }
+
+.page {
+  padding: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.section h2 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Forms */
+.form-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  flex: 1;
+}
+
+.field label {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+input, select {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #ccd0d7;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+button {
+  padding: 0.45rem 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background: #3b82f6;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) { background: #2563eb; }
+button:disabled { opacity: 0.55; cursor: not-allowed; }
+
+button.secondary { background: #6b7280; }
+button.secondary:hover:not(:disabled) { background: #4b5563; }
+
+button.danger { background: #dc2626; }
+button.danger:hover:not(:disabled) { background: #b91c1c; }
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.55rem 0.6rem;
+  border-bottom: 1px solid #eee;
+}
+
+th { background: #fafafa; font-weight: 600; color: #555; }
+
+/* Messages */
+.msg {
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.msg.error   { background: #fde8e8; color: #9b1c1c; }
+.msg.success { background: #def7ec; color: #03543f; }
+
+/* Login */
+.login-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.login-card {
+  background: #fff;
+  padding: 1.75rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 380px;
+}
+
+.login-card h1 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.login-card .field { margin-bottom: 0.75rem; }
+
+.login-card button { width: 100%; padding: 0.6rem; }
+
+.hint {
+  margin-top: 0.85rem;
+  font-size: 0.8rem;
+  color: #777;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge.AVAILABLE { background: #def7ec; color: #03543f; }
+.badge.BOOKED    { background: #fef3c7; color: #92400e; }
+.badge.CANCELLED { background: #fee2e2; color: #991b1b; }
+.badge.ACTIVE    { background: #dbeafe; color: #1e40af; }
+
+.actions { display: flex; gap: 0.4rem; }
+
+@media (max-width: 640px) {
+  .page { padding: 0.75rem; }
+  table { font-size: 0.85rem; }
+  th, td { padding: 0.4rem 0.4rem; }
+  .form-row { flex-direction: column; align-items: stretch; }
+}
